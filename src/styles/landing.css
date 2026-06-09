@@ -1,0 +1,26 @@
+.landing-page {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.landing-content {
+  width: 100%;
+  padding: 24px;
+}
+
+.landing-content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #1d1d1d;
+}
+
+.landing-content p {
+  color: #808080;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.landing-content .btn:first-of-type {
+  margin-bottom: 12px;
+}

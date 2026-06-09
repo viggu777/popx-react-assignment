@@ -32,6 +32,16 @@ body {
   font-weight: 600;
 }
 
+.btn-primary {
+  background: #6c25ff;
+  color: white;
+}
+
+.btn-secondary {
+  background: #cebafb;
+  color: #1d1d1d;
+}
+
 .primary {
   background: #6c25ff;
   color: white;

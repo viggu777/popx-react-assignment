@@ -1,0 +1,14 @@
+.login-page {
+  padding: 24px;
+}
+
+.login-page h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.login-page p {
+  color: #808080;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
