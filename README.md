@@ -1,16 +1,96 @@
-# React + Vite
+# PopX React Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React implementation of the PopX mobile application UI based on the provided design. The goal was to recreate the screens as closely as possible while maintaining clean code, reusable components, and smooth navigation between pages.
 
-Currently, two official plugins are available:
+The application includes a complete user flow starting from the welcome screen, allowing users to create an account, log in, and view their profile information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What I Built
 
-## React Compiler
+- A landing page with navigation to Login and Signup screens.
+- A signup form that collects user information and stores it in LocalStorage.
+- A login page with email and password validation.
+- A profile page that displays the registered user's information.
+- Reusable components for buttons, input fields, and the mobile layout container.
+- Client-side routing using React Router.
+- Form validation with user-friendly error messages.
+- Responsive mobile-style interface centered on the webpage.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### Landing Page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The landing page acts as the entry point of the application and provides navigation options for new and existing users.
+
+### Signup Page
+
+Users can create an account by entering their details. Basic validation is included to ensure required fields are filled correctly. The entered data is stored in LocalStorage to simulate a simple authentication flow.
+
+### Login Page
+
+The login page validates the user's email and password against the information stored during signup. Invalid login attempts display an inline error message instead of using browser alerts.
+
+### Profile Page
+
+After successful login or signup, users are redirected to their profile page where their information is displayed in a clean account settings layout.
+
+## Technologies Used
+
+- React
+- Vite
+- React Router DOM
+- CSS3
+- LocalStorage
+
+## Running the Project Locally
+
+1. Clone the repository
+
+```bash
+git clone <repository-url>
+```
+
+2. Move into the project folder
+
+```bash
+cd popx-react-assignment
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Start the development server
+
+```bash
+npm run dev
+```
+
+5. Open the application in your browser
+
+```text
+http://localhost:5173
+```
+
+## Production Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Live Demo
+
+Add your deployed Vercel or Netlify URL here.
+
+## Author
+
+Mohan Vignesh

@@ -6,7 +6,7 @@
 
 body {
   background: #ffffff;
-  font-family: Arial, sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .app-container {
@@ -79,7 +79,8 @@ body {
   left: 12px;
   background: white;
   padding: 0 4px;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 400;
   color: #6c25ff;
 }
 
@@ -90,6 +91,7 @@ body {
   border-radius: 6px;
   padding: 0 14px;
   font-size: 14px;
+  color: #1d2226;
   transition: all 0.3s ease;
 }
 

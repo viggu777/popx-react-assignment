@@ -1,50 +1,24 @@
 import { useEffect, useState } from "react";
 import MobileLayout from "../components/MobileLayout";
+
+import profileImg from "../assets/Ellipse 114@2x.png";
+import cameraIcon from "../assets/Group 1585.svg";
+
 import "../styles/profile.css";
 
 function Profile() {
   const [user, setUser] = useState({
     fullName: "Marry Doe",
     email: "marrydoe@gmail.com",
-    avatarSeed: "Marry Doe",
   });
 
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
 
     if (storedUser) {
-      const parsedUser = JSON.parse(storedUser);
-
-      setUser({
-        ...parsedUser,
-        avatarSeed: parsedUser.avatarSeed || parsedUser.fullName || "Marry Doe",
-      });
+      setUser(JSON.parse(storedUser));
     }
   }, []);
-
-  const changeAvatar = () => {
-    const avatarOptions = [
-      "Jennifer Lee",
-      "Christopher Evans",
-      "Rachel Green",
-      "Matthew Cooper",
-      "Natalie Foster",
-      "Andrew Collins",
-      "Victoria Hughes",
-      "Jonathan Price",
-    ];
-    const randomAvatar =
-      avatarOptions[Math.floor(Math.random() * avatarOptions.length)];
-
-    const updatedUser = {
-      ...user,
-      avatarSeed: randomAvatar,
-    };
-
-    setUser(updatedUser);
-
-    localStorage.setItem("user", JSON.stringify(updatedUser));
-  };
 
   return (
     <MobileLayout>
@@ -54,15 +28,11 @@ function Profile() {
         <div className="profile-card">
           <div className="profile-header">
             <div className="avatar-wrapper">
-              <img
-                className="profile-avatar"
-                src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${user.avatarSeed}`}
-                alt="Profile"
-              />
+              <img className="profile-avatar" src={profileImg} alt="Profile" />
 
-              <button className="camera-btn" onClick={changeAvatar}>
-                📷
-              </button>
+              <div className="camera-btn">
+                <img src={cameraIcon} alt="Camera" className="camera-icon" />
+              </div>
             </div>
 
             <div>

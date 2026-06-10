@@ -4,11 +4,13 @@
 
 .login-page h1 {
   font-size: 28px;
+  font-weight: 500;
   margin-bottom: 12px;
+  color: #1d2226;
 }
-
 .login-page p {
-  color: #808080;
+  color: #919191;
+  font-size: 18px;
   margin-bottom: 24px;
   line-height: 1.5;
 }
