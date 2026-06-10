@@ -12,14 +12,37 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState("");
+
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const storedUser = JSON.parse(localStorage.getItem("user"));
+
+  const emailError =
+    email && !validateEmail(email) ? "Please enter a valid email address" : "";
+
+  const passwordError =
+    password && password.length < 6
+      ? "Password must be at least 6 characters"
+      : "";
+
+  const isFormValid = validateEmail(email) && password.length >= 6;
 
   const handleLogin = () => {
-    if (!email || !password) {
-      alert("Please fill all fields");
-      return;
-    }
+    const storedUser = JSON.parse(localStorage.getItem("user"));
 
-    navigate("/profile");
+    if (
+      storedUser &&
+      storedUser.email === email &&
+      storedUser.password === password
+    ) {
+      setLoginError("");
+      navigate("/profile");
+    } else {
+      setLoginError("Invalid email or password");
+    }
   };
 
   return (
@@ -34,20 +57,31 @@ function Login() {
 
         <InputField
           label="Email Address"
+          name="email"
           placeholder="Enter email address"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            setLoginError("");
+          }}
+          error={emailError}
         />
 
         <InputField
           label="Password"
+          name="password"
           type="password"
           placeholder="Enter password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => {
+            setPassword(e.target.value);
+            setLoginError("");
+          }}
+          error={passwordError}
         />
+        {loginError && <span className="login-error">{loginError}</span>}
 
-        <Button text="Login" onClick={handleLogin} />
+        <Button text="Login" onClick={handleLogin} disabled={!isFormValid} />
       </div>
     </MobileLayout>
   );
