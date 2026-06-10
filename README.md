@@ -46,7 +46,7 @@ After successful login or signup, users are redirected to their profile page whe
 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/viggu777/popx-react-assignment/
 ```
 
 2. Move into the project folder
@@ -89,7 +89,7 @@ npm run preview
 
 ## Live Demo
 
-Add your deployed Vercel or Netlify URL here.
+https://popx-vignesh.netlify.app/
 
 ## Author
 
