@@ -19,7 +19,7 @@ body {
 .mobile-screen {
   width: 375px;
   height: 812px;
-  background: #f7f7f7;
+  background: #f7f8f9;
   border: 1px solid #e5e5e5;
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .btn-primary {
-  background: #9466ff;
+  background: #6c25ff;
   color: white;
 }
 
@@ -77,11 +77,16 @@ body {
   position: absolute;
   top: -8px;
   left: 12px;
-  background: white;
+  background: #f7f8f9;
   padding: 0 4px;
   font-size: 13px;
   font-weight: 400;
   color: #6c25ff;
+  z-index: 2;
+}
+
+.required-star {
+  color: #dd4a3d;
 }
 
 .input-group input {
@@ -93,6 +98,7 @@ body {
   font-size: 14px;
   color: #1d2226;
   transition: all 0.3s ease;
+  background: #f7f8f9;
 }
 
 .input-group input:focus {

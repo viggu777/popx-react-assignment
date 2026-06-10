@@ -47,6 +47,7 @@ function Profile() {
             Erat, Sed Diam.
           </p>
         </div>
+        <div className="bottom-divider"></div>
       </div>
     </MobileLayout>
   );

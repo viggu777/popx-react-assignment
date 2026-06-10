@@ -9,8 +9,10 @@ function InputField({
 }) {
   return (
     <div className="input-group">
-      <label>{label}</label>
-
+      <label className="floating-label">
+        {label.replace("*", "")}
+        {label.includes("*") && <span className="required-star">*</span>}
+      </label>
       <input
         type={type}
         name={name}

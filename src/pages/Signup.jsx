@@ -125,7 +125,10 @@ function Signup() {
         />
 
         <div className="radio-group">
-          <p>Are you an Agency?*</p>
+          <p>
+            Are you an Agency?
+            <span className="required-star">*</span>
+          </p>
 
           <div className="radio-options">
             <label>
